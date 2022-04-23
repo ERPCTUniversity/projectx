@@ -1,0 +1,45 @@
+.main{
+    display: flex;
+    margin-top: 5%;    
+    margin-left: 10%;
+    margin-right: 5%;
+    justify-content: space-around;
+}
+
+.topcard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;    
+    height: 400px;
+  }             
+  
+  .topcard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  
+  .active-users {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin: 0%;
+    margin-left: 5%;
+    height: 300px;
+    border-radius: 5%;    
+    display: flex;
+    top: 50%;
+    position: relative;
+  }             
+  
+  .active-users:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .loader{
+position: absolute;
+}
+
+  .container {
+    padding: 10px;
+    align-self: flex-end;
+}
