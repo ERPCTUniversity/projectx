@@ -12,6 +12,7 @@ function App() {
   const [DSGPdata, setDSGPdata] = useState(null);
   const [HGPdata, setHGPdata] = useState(null);
   const [weekDays, setWeekDays] = useState(null);
+  const baseUrl = `http://192.168.132.126:8080/ProjectXWebAPI/`;
 
   useEffect(() => {
     var weekDays = getWeekDays("en-US");
@@ -22,17 +23,17 @@ function App() {
   }, []);
 
   const getDPRData = async () => {
-    axios.get(`http://192.168.56.1:8080/ProjectX/api/dpr`).then((res) => {
+    axios.get(baseUrl + `api/dpr`).then((res) => {
       setdprdata(res.data);
     });
   };
   const getLeaveData = async () => {
-    axios.get(`http://192.168.56.1:8080/ProjectX/api/leave`).then((res) => {
+    axios.get(baseUrl + `api/leave`).then((res) => {
       setleavedata(res.data);
     });
   };
   const getGatePassData = async () => {
-    axios.get(`http://192.168.56.1:8080/ProjectX/api/gatepass`).then((res) => {
+    axios.get(baseUrl + `api/gatepass`).then((res) => {
       setDSGPdata(res.data[0]);
       setHGPdata(res.data[1]);
     });
