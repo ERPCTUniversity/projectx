@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Sentry } from "react-activity";
 
 import "./App.css";
 import Cards from "./components/Cards";
