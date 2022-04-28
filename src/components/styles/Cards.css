@@ -1,23 +1,34 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 30%;
-    margin: 3%;
-    height: 300px;
-    border-radius: 5%;
-    display: flex; 
-  }             
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .loader{
-    align-self: center;
-    justify-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+
+  margin: 15px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
 }
 
-  .container {
-    padding: 10px;
-    align-self: flex-end;
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-graph {
+  height: 220px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graph {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-loader {
+  display: flex;
+}
+.card-title {
+  display: flex;
 }
