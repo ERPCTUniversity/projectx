@@ -7,8 +7,9 @@ import "./styles/TopCard.css";
 
 function TopCard({ days }) {
   const [androidData, setandrodiData] = useState(null);
-  //const [iosData, setiosData] = useState([0, 0, 0, 0, 0, 0, 0]);
+  const [iosData, setiosData] = useState(null);
   const [data, setData] = useState(null);
+  const baseUrl = `http://192.168.132.126:8080/ProjectXWebAPI/`;
 
   useEffect(() => {
     getDAUData();
@@ -16,12 +17,13 @@ function TopCard({ days }) {
   }, []);
 
   const getDAUData = async () => {
-    axios.get(`http://192.168.56.1:8080/ProjectX/api/dau`).then((res) => {
+    axios.get(baseUrl + `api/dau`).then((res) => {
       setandrodiData(res.data);
+      setiosData([0, 0, 0, 0, 0, 0, 0]);
     });
   };
   const getAUData = async () => {
-    axios.get(`http://192.168.56.1:8080/ProjectX/api/au`).then((res) => {
+    axios.get(baseUrl + `api/au`).then((res) => {
       setData(res.data);
     });
   };
