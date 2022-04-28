@@ -12,7 +12,7 @@ function App() {
   const [DSGPdata, setDSGPdata] = useState(null);
   const [HGPdata, setHGPdata] = useState(null);
   const [weekDays, setWeekDays] = useState(null);
-  const baseUrl = `http://192.168.132.126:8080/ProjectXWebAPI/`;
+  const baseUrl = `http://erp.ctuniversity.in/ProjectXWebAPI/`;
 
   useEffect(() => {
     var weekDays = getWeekDays("en-US");

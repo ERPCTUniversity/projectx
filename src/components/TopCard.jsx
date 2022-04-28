@@ -9,7 +9,7 @@ function TopCard({ days }) {
   const [androidData, setandrodiData] = useState(null);
   const [iosData, setiosData] = useState(null);
   const [data, setData] = useState(null);
-  const baseUrl = `http://192.168.132.126:8080/ProjectXWebAPI/`;
+  const baseUrl = `http://erp.ctuniversity.in/ProjectXWebAPI/`;
 
   useEffect(() => {
     getDAUData();
