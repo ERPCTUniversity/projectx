@@ -7,7 +7,7 @@ import "./styles/TopCard.css";
 
 function TopCard({ days }) {
   const [androidData, setandrodiData] = useState(null);
-  const [iosData, setiosData] = useState([0, 0, 0, 0, 0, 0, 0]);
+  //const [iosData, setiosData] = useState([0, 0, 0, 0, 0, 0, 0]);
   const [data, setData] = useState(null);
 
   useEffect(() => {
