@@ -14,7 +14,12 @@ function App() {
   const [weekDays, setWeekDays] = useState(null);
   const baseUrl = `http://erp.ctuniversity.in/ProjectXWebAPI/`;
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
     var weekDays = getWeekDays("en-US");
     setWeekDays(weekDays);
     getDPRData();
@@ -53,30 +58,38 @@ function App() {
 
   return (
     <div className="home">
-      <div className="navbar-top">
-        <NavBar />
-      </div>
-      <div className="home-row">
-        <TopCard days={weekDays} />
-      </div>
-      <div className="home-row">
-        <Cards days={weekDays} data1={dprdata} label1="DPR" />
+      {loading ? (
+        <div className="splash">
+          <h1>ProjectX</h1>
+        </div>
+      ) : (
+        <>
+          <div className="navbar-top">
+            <NavBar />
+          </div>
+          <div className="home-row">
+            <TopCard days={weekDays} />
+          </div>
+          <div className="home-row">
+            <Cards days={weekDays} data1={dprdata} label1="DPR" />
 
-        <Cards
-          days={weekDays}
-          data1={leavedata}
-          label1="Faculty Leave Trend"
-          data2={leavedata}
-          label2="PDL"
-        />
-        <Cards
-          days={weekDays}
-          data1={HGPdata}
-          label1="Hostel GatePass Trend"
-          data2={DSGPdata}
-          label2={"DaySchol GatePass Trend"}
-        />
-      </div>
+            <Cards
+              days={weekDays}
+              data1={leavedata}
+              label1="Faculty Leave Trend"
+              data2={leavedata}
+              label2="PDL"
+            />
+            <Cards
+              days={weekDays}
+              data1={HGPdata}
+              label1="Hostel GatePass Trend"
+              data2={DSGPdata}
+              label2={"DaySchol GatePass Trend"}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }
