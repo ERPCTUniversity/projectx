@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Bounce, Sentry } from "react-activity";
+import { Bounce } from "react-activity";
 import DoughNutGraph from "../utlis/Doughnut";
 import LineGraph from "../utlis/LineGraph";
 import "./styles/TopCard.css";
