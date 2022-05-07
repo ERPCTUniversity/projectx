@@ -12,7 +12,7 @@ function App() {
   const [DSGPdata, setDSGPdata] = useState(null);
   const [HGPdata, setHGPdata] = useState(null);
   const [weekDays, setWeekDays] = useState(null);
-  const baseUrl = `http://erp.ctuniversity.in/ProjectXWebAPI/`;
+  const baseUrl = `https://erp.ctuniversity.in/ProjectXWebAPI/`;
   //const baseUrl = `http://192.168.56.1:8080/ProjectX/`;
   //const baseUrl = `http://192.168.132.127/ProjectXWebAPI/`;
 
