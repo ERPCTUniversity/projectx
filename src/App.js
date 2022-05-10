@@ -21,13 +21,13 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
-    var weekDays = getWeekDays("en-US");
-    setWeekDays(weekDays);
-    getDPRData();
-    getLeaveData();
-    getGatePassData();
-  }, []);
+      var weekDays = getWeekDays("en-US");
+      setWeekDays(weekDays);
+      getDPRData();
+      getLeaveData();
+      getGatePassData();
+    }, 2000);
+  });
 
   const getDPRData = async () => {
     axios.get(baseUrl + `api/dpr`).then((res) => {
@@ -74,7 +74,6 @@ function App() {
           </div>
           <div className="home-row">
             <Cards days={weekDays} data1={dprdata} label1="DPR" />
-
             <Cards
               days={weekDays}
               data1={leavedata}
