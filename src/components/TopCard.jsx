@@ -14,9 +14,11 @@ function TopCard({ days }) {
   const baseUrl = `http://192.168.132.127/ProjectXWebAPI/`;
 
   useEffect(() => {
-    getDAUData();
-    getAUData();
-  }, []);
+    setTimeout(() => {
+      getDAUData();
+      getAUData();
+    }, 2000);
+  });
 
   const getDAUData = async () => {
     axios.get(baseUrl + `api/dau`).then((res) => {
@@ -66,7 +68,7 @@ function TopCard({ days }) {
 
         <div className="card-title">
           <h4>
-            <h3>Current Active Users</h3>
+            <b>Current Active Users</b>
           </h4>
         </div>
       </div>
