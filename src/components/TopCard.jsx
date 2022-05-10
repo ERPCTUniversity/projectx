@@ -50,7 +50,7 @@ function TopCard({ days }) {
           )}
         </div>
         <div className="graph-title">
-          <h4>Daily Active Users</h4>
+          <h2>Daily Active Users</h2>
         </div>
       </div>
 
@@ -66,7 +66,7 @@ function TopCard({ days }) {
 
         <div className="card-title">
           <h4>
-            <b>Current Active Users</b>
+            <h3>Current Active Users</h3>
           </h4>
         </div>
       </div>
