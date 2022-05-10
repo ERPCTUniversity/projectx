@@ -25,11 +25,11 @@ function Cards({ days, data1, label1, data2, label2 }) {
       </div>
 
       <div className="card-title">
-        <h4>
+        <h3>
           <b>
             {label1 === "Hostel GatePass Trend" ? "GatePass Trend" : label1}
           </b>
-        </h4>
+        </h3>
       </div>
     </div>
   );

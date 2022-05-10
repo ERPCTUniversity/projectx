@@ -64,6 +64,21 @@ function LineGraph({ days, data1, data2, data1label, data2label }) {
           scales: {
             y: {
               beginAtZero: true,
+              ticks: {
+                font: {
+                  size: 15,
+                },
+              },
+            },
+            x: {
+              ticks: {
+                font: {
+                  size: 15,
+                },
+              },
+            },
+            ticks: {
+              display: false,
             },
           },
         }}
