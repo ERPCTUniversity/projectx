@@ -9,9 +9,9 @@ function TopCard({ days }) {
   const [androidData, setandrodiData] = useState(null);
   const [iosData, setiosData] = useState(null);
   const [data, setData] = useState(null);
-  const baseUrl = `https://erp.ctuniversity.in/ProjectXWebAPI/`;
+  //const baseUrl = `https://erp.ctuniversity.in/ProjectXWebAPI/`;
   //const baseUrl = `https://localhost:44333/ProjectX/`;
-  //const baseUrl = `http://192.168.132.127/ProjectXWebAPI/`;
+  const baseUrl = `http://192.168.132.127/ProjectXWebAPI/`;
 
   useEffect(() => {
     getDAUData();
