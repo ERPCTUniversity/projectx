@@ -30,7 +30,15 @@ let color = [
   "rgba(255, 159, 64, 1)",
 ];
 
-function LineGraph({ days, data1, data2, data1label, data2label }) {
+function LineGraph({
+  days,
+  data1,
+  data2,
+  data3,
+  data1label,
+  data2label,
+  data3label,
+}) {
   return (
     <div>
       <Line
@@ -41,7 +49,8 @@ function LineGraph({ days, data1, data2, data1label, data2label }) {
               label: data1label,
               data: data1,
               borderColor: color,
-              borderWidth: 1,
+              borderWidth: 3,
+              lineThickness: 5,
             },
             {
               label: data2label,
@@ -55,7 +64,15 @@ function LineGraph({ days, data1, data2, data1label, data2label }) {
               //   "rgba(255, 159, 64, 0.2)",
               // ],
               borderColor: color,
-              borderWidth: 1,
+              borderWidth: 3,
+              lineThickness: 5,
+            },
+            {
+              label: data3label,
+              data: data3,
+              borderColor: color,
+              borderWidth: 3,
+              lineThickness: 5,
             },
           ],
         }}
